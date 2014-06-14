@@ -1,13 +1,14 @@
-Name:		kig
 Summary:	KDE Interactive Geometry
+Name:		kig
 Version:	4.13.2
 Release:	1
+License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
-License:	GPLv2 GFDL
-URL:		http://edu.kde.org/kig
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
+Url:		http://edu.kde.org/kig
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
+BuildRequires:	kdelibs4-devel
+BuildRequires:	pkgconfig(python)
 
 %description
 Kig is a program for use in math classes in high school, to allow
@@ -42,6 +43,7 @@ students to interactively explore geometric concepts.
 %changelog
 * Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.2-1
 - New version 4.13.2
+- Add pkgconfig(python) to BuildRequires
 
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.4-1
 - New version 4.12.4
