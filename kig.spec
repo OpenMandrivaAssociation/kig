@@ -17,16 +17,17 @@ students to interactively explore geometric concepts.
 %files
 %doc COPYING COPYING.DOC AUTHORS ChangeLog
 %doc %{_kde_docdir}/HTML/en/kig
+%{_kde_appsdir}/katepart/syntax/python-kig.xml
 %{_kde_appsdir}/kig
+%{_kde_applicationsdir}/kig.desktop
 %{_kde_bindir}/kig
 %{_kde_bindir}/pykig.py
-%{_kde_libdir}/kde4/kigpart.so
+%{_kde_datadir}/appdata/kig.appdata.xml
 %{_kde_iconsdir}/*/*/apps/kig.*
 %{_kde_iconsdir}/*/*/mimetypes/application-x-kig.*
-%{_kde_applicationsdir}/kig.desktop
-%{_kde_services}/kig_part.desktop
-%{_kde_appsdir}/katepart/syntax/python-kig.xml
+%{_kde_libdir}/kde4/kigpart.so
 %{_kde_mandir}/man1/kig.1.*
+%{_kde_services}/kig_part.desktop
 
 #----------------------------------------------------------------------
 
@@ -43,6 +44,7 @@ students to interactively explore geometric concepts.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Update files
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
