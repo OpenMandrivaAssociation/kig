@@ -1,14 +1,32 @@
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	4.14.3
-Release:	2
+Version:	14.12.0
+Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kig
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
-BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(python)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(Gettext)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5Parts)
+BuildRequires:	cmake(KF5TextEditor)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5Archive)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(KF5Emoticons)
+BuildRequires:	cmake(KF5ItemModels)
+BuildRequires:	cmake(Qt5Core)
+
 
 %description
 Kig is a program for use in math classes in high school, to allow
@@ -17,33 +35,34 @@ students to interactively explore geometric concepts.
 %files
 %doc COPYING COPYING.DOC AUTHORS ChangeLog
 %doc %{_kde_docdir}/HTML/en/kig
-%{_kde_appsdir}/katepart/syntax/python-kig.xml
-%{_kde_appsdir}/kig
-%{_kde_applicationsdir}/kig.desktop
+%{_datadir}/katepart/syntax/python-kig.xml
+%{_datadir}/kig
+%{_datadir}/applications/kig.desktop
 %{_kde_bindir}/kig
 %{_kde_bindir}/pykig.py
 %{_kde_datadir}/appdata/kig.appdata.xml
 %{_kde_iconsdir}/*/*/apps/kig.*
 %{_kde_iconsdir}/*/*/mimetypes/application-x-kig.*
-%{_kde_libdir}/kde4/kigpart.so
+%{_libdir}/qt5/plugins/kigpart.so
 %{_kde_mandir}/man1/kig.1.*
-%{_kde_services}/kig_part.desktop
+%{_datadir}/kservices5/kig_part.desktop
+%{_datadir}/kxmlgui5/kig
 
 #----------------------------------------------------------------------
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4
-%make
+ninja -C build
 
 %install
-%makeinstall_std -C build
+DESTDIR="%{buildroot}" ninja -C build install
 
 %changelog
-* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
-- New version 4.14.3
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 14.12.0-1
+- New version 14.12.0
 
 * Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
 - New version 4.14.2
