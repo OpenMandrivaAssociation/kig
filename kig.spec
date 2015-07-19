@@ -1,7 +1,7 @@
 Summary:	KDE Interactive Geometry
 Name:		kig
 Version:	15.04.3
-Release:	1
+Release:	2
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kig
