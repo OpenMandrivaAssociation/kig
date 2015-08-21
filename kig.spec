@@ -1,7 +1,7 @@
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	15.04.3
-Release:	2
+Version:	15.08.0
+Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kig
@@ -38,8 +38,7 @@ students to interactively explore geometric concepts.
 %{_bindir}/pykig.py
 %{_libdir}/qt5/plugins/kigpart.so
 %{_datadir}/kig
-%{_datadir}/applications/kig.desktop
-%{_datadir}/katepart/syntax/python-kig.xml
+%{_datadir}/applications/org.kde.kig.desktop
 %{_datadir}/appdata/kig.appdata.xml
 %{_datadir}/kservices5/kig_part.desktop
 %{_datadir}/kxmlgui5/kig/*.rc
