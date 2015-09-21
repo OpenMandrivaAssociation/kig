@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kig-15.08.0.tar.xz: 5d980bef6706e33d0077e5e61f9f63f44b72bc07
+sources:
+  kig-15.08.1.tar.xz: 4d9accefd3c47fb3145f524066485b93d7dab984

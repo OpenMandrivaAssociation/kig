@@ -1,6 +1,6 @@
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	15.08.0
+Version:	15.08.1
 Release:	2
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -26,6 +26,8 @@ BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5Emoticons)
 BuildRequires:	cmake(KF5ItemModels)
 BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(Qt5XmlPatterns)
 
 %description
 Kig is a program for use in math classes in high school, to allow
