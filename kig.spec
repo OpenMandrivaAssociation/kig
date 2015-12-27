@@ -41,7 +41,7 @@ students to interactively explore geometric concepts.
 %{_libdir}/qt5/plugins/kigpart.so
 %{_datadir}/kig
 %{_datadir}/applications/org.kde.kig.desktop
-%{_datadir}/appdata/kig.appdata.xml
+%{_datadir}/appdata/org.kde.kig.appdata.xml
 %{_datadir}/kservices5/kig_part.desktop
 %{_datadir}/kxmlgui5/kig/*.rc
 %{_iconsdir}/hicolor/*/*/*kig.*[gz]
