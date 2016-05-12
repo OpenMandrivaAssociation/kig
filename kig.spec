@@ -1,6 +1,6 @@
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	16.04.0
+Version:	16.04.1
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
