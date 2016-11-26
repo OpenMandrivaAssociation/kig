@@ -7,6 +7,7 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kig
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	boost-devel
+BuildRequires:	boost-python3-devel
 BuildRequires:	pkgconfig(python)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
@@ -34,14 +35,13 @@ Kig is a program for use in math classes in high school, to allow
 students to interactively explore geometric concepts.
 
 %files
-%doc COPYING COPYING.DOC AUTHORS ChangeLog
 %doc %{_docdir}/HTML/en/kig
 %{_bindir}/kig
 %{_bindir}/pykig.py
 %{_libdir}/qt5/plugins/kigpart.so
 %{_datadir}/kig
 %{_datadir}/applications/org.kde.kig.desktop
-%{_datadir}/appdata/org.kde.kig.appdata.xml
+%{_datadir}/metainfo/org.kde.kig.appdata.xml
 %{_datadir}/kservices5/kig_part.desktop
 %{_datadir}/kxmlgui5/kig/*.rc
 %{_iconsdir}/hicolor/*/*/*kig.*[gz]
