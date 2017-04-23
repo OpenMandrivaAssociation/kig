@@ -1,6 +1,6 @@
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -34,19 +34,17 @@ BuildRequires:	cmake(Qt5XmlPatterns)
 Kig is a program for use in math classes in high school, to allow
 students to interactively explore geometric concepts.
 
-%files
-%doc %{_docdir}/HTML/en/kig
+%files -f all.lang
 %{_bindir}/kig
 %{_bindir}/pykig.py
 %{_libdir}/qt5/plugins/kigpart.so
 %{_datadir}/kig
 %{_datadir}/applications/org.kde.kig.desktop
-%{_datadir}/appdata/*.xml
+%{_datadir}/metainfo/*.xml
 %{_datadir}/kservices5/kig_part.desktop
 %{_datadir}/kxmlgui5/kig/*.rc
 %{_iconsdir}/hicolor/*/*/*kig.*[gz]
 %{_mandir}/man1/kig.1.*
-%{_datadir}/katepart/syntax/python-kig.xml
 
 #----------------------------------------------------------------------
 
@@ -59,3 +57,7 @@ students to interactively explore geometric concepts.
 
 %install
 %ninja_install -C build
+%find_lang kig --with-html --with-man
+%find_lang kfile_drgeo
+%find_lang kfile_kig
+cat *.lang >all.lang
