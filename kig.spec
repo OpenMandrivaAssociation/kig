@@ -43,6 +43,7 @@ students to interactively explore geometric concepts.
 %{_datadir}/applications/org.kde.kig.desktop
 %{_datadir}/metainfo/*.xml
 %{_datadir}/kservices5/kig_part.desktop
+%{_datadir}/katepart5/syntax/python-kig.xml
 %{_datadir}/kxmlgui5/kig/*.rc
 %{_iconsdir}/hicolor/*/*/*kig.*[gz]
 %{_mandir}/man1/kig.1.*
