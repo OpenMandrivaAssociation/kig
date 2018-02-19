@@ -1,2 +1,4 @@
+removed_sources:
+  kig-17.12.1.tar.xz: 0e1716dd0322cf3cc72610350851f87ca5fbb2c6
 sources:
-  kig-17.04.0.tar.xz: c572039b0d5a766bb3fff96ca5ea7b4853828908
+  kig-17.12.2.tar.xz: 38ed881813b52d8becfb358ad75e19d0df095f2b
