@@ -1,15 +1,16 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	19.04.2
+Version:	19.07.80
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kig
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kig-19.07.80-python3.patch
 BuildRequires:	boost-devel
 BuildRequires:	boost-python-devel
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5Svg)
@@ -51,8 +52,10 @@ students to interactively explore geometric concepts.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
-%cmake_kde5
+%autosetup -p1
+%cmake_kde5 \
+	-DPYTHON_INCLUDE_DIR=%{_includedir}/python3.7m \
+	-DPYTHON_LIBRARY=%{_libdir}/libpython3.7m.so
 
 %build
 %ninja -C build
