@@ -1,13 +1,12 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	19.08.3
+Version:	19.11.80
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kig
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kig-19.07.80-python3.patch
 BuildRequires:	boost-devel
 BuildRequires:	boost-python-devel
 BuildRequires:	pkgconfig(python3)
