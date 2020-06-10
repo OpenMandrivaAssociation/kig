@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	20.04.1
+Version:	20.04.2
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -35,7 +35,7 @@ BuildRequires:	cmake(Qt5XmlPatterns)
 Kig is a program for use in math classes in high school, to allow
 students to interactively explore geometric concepts.
 
-%files -f all.lang
+%files -f kig.lang
 %{_bindir}/kig
 %{_bindir}/pykig.py
 %{_libdir}/qt5/plugins/kigpart.so
@@ -61,7 +61,4 @@ students to interactively explore geometric concepts.
 
 %install
 %ninja_install -C build
-%find_lang kig --with-html --with-man
-%find_lang kfile_drgeo
-%find_lang kfile_kig
-cat *.lang >all.lang
+%find_lang kig --with-html --with-man --all-name
