@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -38,7 +38,7 @@ students to interactively explore geometric concepts.
 %files -f kig.lang
 %{_bindir}/kig
 %{_bindir}/pykig.py
-%{_libdir}/qt5/plugins/kigpart.so
+%{_libdir}/qt5/plugins/kf5/parts/kigpart.so
 %{_datadir}/kig
 %{_datadir}/applications/org.kde.kig.desktop
 %{_datadir}/metainfo/*.xml
