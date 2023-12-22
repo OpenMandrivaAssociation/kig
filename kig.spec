@@ -7,6 +7,7 @@ License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kig
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:  gettext
 BuildRequires:	boost-devel
 BuildRequires:	boost-python-devel
 BuildRequires:	pkgconfig(python3)
