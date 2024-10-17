@@ -5,7 +5,7 @@ Version:	23.08.5
 Release:	4
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
-Url:		http://edu.kde.org/kig
+Url:		https://edu.kde.org/kig
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:  gettext
 BuildRequires:	boost-devel
