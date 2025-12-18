@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	25.08.3
-Release:	2
+Version:	25.12.0
+Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		https://edu.kde.org/kig
