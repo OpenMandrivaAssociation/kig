@@ -1,4 +1,5 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+%global pyvernum %(echo %{pyver}|sed -e 's,\\.,,g')
 Summary:	KDE Interactive Geometry
 Name:		kig
 Version:	26.08.2
@@ -9,7 +10,7 @@ Url:		https://edu.kde.org/kig
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:  gettext
 BuildRequires:	boost-devel
-BuildRequires:	boost-python-devel
+BuildRequires:	%mklibname -d boost_python%{pyvernum}
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Widgets)
