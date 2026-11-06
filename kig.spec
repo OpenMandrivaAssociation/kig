@@ -2,8 +2,8 @@
 %global pyvernum %(echo %{pyver}|sed -e 's,\\.,,g')
 Summary:	KDE Interactive Geometry
 Name:		kig
-Version:	26.08.2
-Release:	2
+Version:	26.08.3
+Release:	1
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		https://edu.kde.org/kig
